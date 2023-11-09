@@ -1,3 +1,5 @@
+// Strings & Arrays only
+
 //---------November 8
 // KATA 1 8kyu
 const removeChar = str => str.substring(1, str.length - 1);
