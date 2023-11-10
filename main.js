@@ -51,4 +51,37 @@ console.log(nicknameGenerator("Kimberly"));
 console.log(nicknameGenerator("Annette"));
 console.log(nicknameGenerator("Kay"));
 
+// //---------November 10
+// KATA 3 6kyu
+const duplicateEncode = word => {
+  return word
+    .toLowerCase()
+    .split('')
+    .map((char, i, w) => w.indexOf(char) == w.lastIndexOf(char) ? '(' : ')' )
+    .join('')  
+} 
+
+console.log(duplicateEncode('din'));
+console.log(duplicateEncode('recede'));
+console.log(duplicateEncode('Success')); 
+console.log(duplicateEncode('(( @'));
+
+// KATA 3 6kyu
+const duplicateCount = str => {
+  let arr = str.toLowerCase().split('')
+  return arr.filter((val, i, arr) => arr.indexOf(val) !== i && arr.lastIndexOf(val) === i).length    
+};
+
+console.log(duplicateCount(""));
+console.log(duplicateCount("abcde"));
+console.log(duplicateCount("aabBcde"));
+console.log(duplicateCount("Robert"));
+console.log(duplicateCount("Indivisibility"));
+console.log(duplicateCount("Indivisibilities"));
+
+// KATA 3 8kyu
+const numberToString = num => num.toString();
+
+console.log(numberToString(123));
+
 
