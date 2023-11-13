@@ -81,4 +81,31 @@ console.log(duplicateCount("Indivisibilities"));
 const numberToString = num => num.toString();
 console.log(numberToString(123));
 
+// //---------November 13
+// www.codewars.com
+// KATA 1 7kyu
+String.prototype.toJadenCase = function() {
+  return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+}
+console.log(toJadenCase("How can mirrors be real if our eyes aren't real"));
 
+// KATA 2 8kyu
+// const noSpace = str => str.split(' ').join('')
+// or
+const noSpace = s => s.replace(/\s/g, '')
+    
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB'));
+console.log(noSpace2('8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB'));
+
+// KATA 3 6kyu
+const twoSum = (nums, target) => {
+    for (let i = 0; i < nums.length; i++) {
+      for (let j = 0; j < nums.length; j++) {
+        if (nums[i] + nums[j] === target) return [i, j];
+      }
+    }
+};
+
+console.log(twoSum([1,2,3], 4));
+
+// //---------November 
