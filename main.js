@@ -92,8 +92,7 @@ console.log(toJadenCase("How can mirrors be real if our eyes aren't real"));
 // KATA 2 8kyu
 // const noSpace = str => str.split(' ').join('')
 // or
-const noSpace = s => s.replace(/\s/g, '')
-    
+const noSpace = s => s.replace(/\s/g, '');
 console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB'));
 console.log(noSpace2('8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB'));
 
@@ -105,7 +104,47 @@ const twoSum = (nums, target) => {
       }
     }
 };
-
 console.log(twoSum([1,2,3], 4));
 
-// //---------November 
+// //---------November 14
+// KATA 1 6kyu
+const solve = s => {
+  const alphabet = ' abcdefghijklmnopqrstuvwxyz';
+  const arr = s.split(/[aeiou]/g);
+  let res = arr.map(el => el.split('').reduce((ttl,cv) => ttl + alphabet.indexOf(cv),0))
+  return Math.max(...res);
+}
+console.log(solve('zodiacs')); //26
+console.log(solve('khrushchev')); // 38
+console.log(solve('twelfthstree')); // 103
+
+// KATA 2 7kyu
+const sortIt = (list, n) => {
+  return list
+    .split(', ')
+    .sort((a, b) => {
+        a = a.toLowerCase()
+        b = b.toLowerCase()
+        let charA = a[n-1]
+        let charB = b[n-1]
+        if (charA > charB) { return 1}
+        else if (charA < charB) { return - 1}
+        else if (charA === charB) { return a > b ? 1 : -1;}     
+      }).join(', ')
+}   
+console.log(sortIt('bid, zag', 2));
+
+// KATA 3 7kyu
+const arrayMash = (a1, a2) => {
+  let mash = [];
+  a1.forEach((el, i) => {
+    mash.push(el, a2[i]);
+  })
+  return mash;
+};
+console.log(arrayMash([1,2,3], ['a', 'b', 'c']));
+
+
+
+
+// //---------November 15
