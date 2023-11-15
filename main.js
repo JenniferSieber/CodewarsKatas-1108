@@ -144,7 +144,22 @@ const arrayMash = (a1, a2) => {
 };
 console.log(arrayMash([1,2,3], ['a', 'b', 'c']));
 
-
-
-
 // //---------November 15
+// www.codewars.com
+// KATA 1 7kyu
+const solution = (s, ending) => s.endsWith(ending);
+console.log(solution('abcde', 'cde')); 
+console.log(solution('abcde', 'abc')); 
+console.log(solution('abc', 'bc')); 
+console.log(solution('abc', 'd')); 
+
+// KATA 2 7kyu
+const booleanToString = (boo) => boo.toString(); 
+console.log(booleanToString(true));
+console.log(booleanToString(false));
+
+// KATA 3 8kyu
+const areYouPlayingBanjo = (name) => (name[0].match(/[r]/gi)) ?`${name} plays banjo` : `${name} does not play banjo`;
+console.log(areYouPlayingBanjo('Robert'));
+console.log(areYouPlayingBanjo('rob'));
+console.log(areYouPlayingBanjo('Bob'));
