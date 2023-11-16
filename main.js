@@ -179,17 +179,19 @@ const alphabetized = s => {
     .replace(/[^a-zA-Z]/g, '')
     .split('')
     .sort((a, b) => (a.toUpperCase() === b.toUpperCase()) ? (str.indexOf(a) - str.indexOf(b)) : a.localeCompare(b))
-    .join('')
+    .join('');
 }
 console.log(alphabetized("The Holy Bible"));
 
 // KATA 3 7kyu
 const alphaSeq = (str) => {
-  let arr = str.toLowerCase().split('').sort()
+  let arr = str.toLowerCase().split('').sort();
   let result = arr.map((char) => {
-    let val = char.charCodeAt(0) - 96
-    return char.toUpperCase() + char.repeat(val - 1)
+    let val = char.charCodeAt(0) - 96;
+    return char.toUpperCase() + char.repeat(val - 1);
   })
-  return result.join(',')
+  return result.join(',');
 };
 console.log(alphaSeq('ZpglnRxqenU'));
+
+//---------November 17
