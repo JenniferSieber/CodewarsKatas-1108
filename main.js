@@ -163,3 +163,33 @@ const areYouPlayingBanjo = (name) => (name[0].match(/[r]/gi)) ?`${name} plays ba
 console.log(areYouPlayingBanjo('Robert'));
 console.log(areYouPlayingBanjo('rob'));
 console.log(areYouPlayingBanjo('Bob'));
+
+ //---------November 16
+// KATA 1 6kyu
+function stringParse(string){
+  if(string + "" !== string) return "Please enter a valid string";
+  return string.replace(/(.)\1(\1+)/g, "$1$1[$2]");
+}
+console.log(stringParse('aaaabbcdefffffffg')); 
+
+// KATA 2 6kyu
+const alphabetized = s => {
+  let str = s.replace(/[^a-zA-Z]/g, '')
+  return str
+    .replace(/[^a-zA-Z]/g, '')
+    .split('')
+    .sort((a, b) => (a.toUpperCase() === b.toUpperCase()) ? (str.indexOf(a) - str.indexOf(b)) : a.localeCompare(b))
+    .join('')
+}
+console.log(alphabetized("The Holy Bible"));
+
+// KATA 3 7kyu
+const alphaSeq = (str) => {
+  let arr = str.toLowerCase().split('').sort()
+  let result = arr.map((char) => {
+    let val = char.charCodeAt(0) - 96
+    return char.toUpperCase() + char.repeat(val - 1)
+  })
+  return result.join(',')
+};
+console.log(alphaSeq('ZpglnRxqenU'));
