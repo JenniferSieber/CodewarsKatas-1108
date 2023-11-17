@@ -222,3 +222,12 @@ console.log(well(['bad', 'bad', 'bad']));
 console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
 console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
 
+//---------November 20
+//---------November 21
+//---------November 22
+//---------November 23
+//---------November 24
+//---------November 27
+//---------November 28
+//---------November 29
+//---------November 30
