@@ -26,14 +26,14 @@ console.log(neutralisation("+-+", "+--"));
 
 // KATA 2 7kyu
 const SubstringTest = (str1, str2) => {
-  str1 = str1.toLowerCase()
-  str2 = str2.toLowerCase()
-  let res = ''
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+  let res = '';
   for (let i = 0; i < str2.length; i++) {
-    if (str1.indexOf(str2.substring(i, 2)) > -1) 
-    return true
+    if (str1.indexOf(str2.substring(i, 2)) > -1); 
+    return true;
   }
-  return false
+  return false;
 } 
 console.log(SubstringTest('Something', 'Fun'));
 console.log(SubstringTest('Something', 'Home'));
@@ -41,9 +41,9 @@ console.log(SubstringTest('Something', 'Home'));
 // KATA 3 7kyu
 const nicknameGenerator = str => {
   if (str.length > 3) {
-    return (str[2].match(/[aeiou]/gi)) ? str.slice(0, 4) : str.slice(0,3)
+    return (str[2].match(/[aeiou]/gi)) ? str.slice(0, 4) : str.slice(0,3);
   }
-  return `Error: Name too short`
+  return `Error: Name too short;`
 };
 console.log(nicknameGenerator("Robert"));
 console.log(nicknameGenerator("Jennifer"));
@@ -58,7 +58,7 @@ const duplicateEncode = word => {
     .toLowerCase()
     .split('')
     .map((char, i, w) => w.indexOf(char) == w.lastIndexOf(char) ? '(' : ')' )
-    .join('')  
+    .join('');  
 } 
 console.log(duplicateEncode('din'));
 console.log(duplicateEncode('recede'));
@@ -67,7 +67,7 @@ console.log(duplicateEncode('(( @'));
 
 // KATA 2 6kyu
 const duplicateCount = str => {
-  let arr = str.toLowerCase().split('')
+  let arr = str.toLowerCase().split('');
   return arr.filter((val, i, arr) => arr.indexOf(val) !== i && arr.lastIndexOf(val) === i).length    
 };
 console.log(duplicateCount(""));
@@ -123,14 +123,14 @@ const sortIt = (list, n) => {
   return list
     .split(', ')
     .sort((a, b) => {
-        a = a.toLowerCase()
-        b = b.toLowerCase()
-        let charA = a[n-1]
-        let charB = b[n-1]
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        let charA = a[n-1];
+        let charB = b[n-1];
         if (charA > charB) { return 1}
         else if (charA < charB) { return - 1}
         else if (charA === charB) { return a > b ? 1 : -1;}     
-      }).join(', ')
+      }).join(', ');
 }   
 console.log(sortIt('bid, zag', 2));
 
