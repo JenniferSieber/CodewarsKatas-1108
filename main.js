@@ -195,3 +195,30 @@ const alphaSeq = (str) => {
 console.log(alphaSeq('ZpglnRxqenU'));
 
 //---------November 17
+// KATA 1 6kyu
+function inArray(a1, a2){
+  const allSubstringsPresent = a1.every(substring => a2.some(str => str.includes(substring)));
+  return allSubstringsPresent ? a1.slice().sort() : [];
+}
+console.log(inArray(["arp", "live", "strong"], ["lively", "alive", "harp", "sharp", "armstrong"], ["lively", "alive", "harp", "sharp", "armstrong"] )); //["arp", "live", "strong"]
+console.log(inArray(["tarp", "mice", "bull"],["lively", "alive", "harp", "sharp", "armstrong"] )); // [] 
+
+// KATA 2 8kyu
+const twoSort = arr => {
+  let sortedArr = arr.sort();
+  return sortedArr[0].split('').join('***');
+}
+console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
+console.log(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]));
+console.log(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones", "Are"]));
+
+// KATA 3 8kyu
+const well = arr => {
+  let count = 0;
+  arr.forEach(idea => idea === 'good' ? count++ : count);
+  return count > 2 ? 'I smell a series!' : count === 0 ? 'Fail!' : 'Publish!';
+};
+console.log(well(['bad', 'bad', 'bad']));
+console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
+console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
+
