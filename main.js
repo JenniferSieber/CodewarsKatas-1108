@@ -223,6 +223,39 @@ console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
 console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
 
 //---------November 20
+// www.codewars.com
+// KATA 1 7kyu
+const sortGrades = arr => {
+  const grades = ['VB','V0', 'V0+', 'V1', 'V2', 'V3', 'V4', 'V5','V6','V7','V8','V9','V10','V11','V12','V13','V14','V15','V16','V17'];
+  return arr.sort((a,b) => grades.indexOf(a) - grades.indexOf(b))
+  };
+console.log(sortGrades(["V0+", "V0", "V16", "V2", "VB", "V6"]));// ["VB", "V0", "V0+", "V2", "V6", "V16"]
+
+
+// KATA 2 7kyu
+const  scramble = (str, arr) => {
+  let array = []
+  arr.forEach((charIndex, i) => array[charIndex] = str[i])
+  return array.join('')
+}
+console.log(scramble('abcd', [0,3,1,2])); // acdb
+console.log(scramble('sc301s', [4,0,3,1,5,2]));// c0s3s1
+console.log(scramble('bskl5', [2,1,4,3,0])); // 5sblk
+
+
+// KATA 3 7kyu
+const checkRoot = str => {
+  let arr = str.split(',').map(Number);
+  if (arr.length != 4 || arr.some(isNaN) || arr.some(el => el == 0)) return 'incorrect input';
+  if (arr.some((num, i) => i > 0 && num - arr[i-1] != 1)) return 'not consecutive';
+  const squared = arr.reduce((ttl, cv) => ttl * cv, 1) + 1;
+  return `${squared}, ${Math.sqrt(squared)}`;
+}
+console.log(checkRoot('0,1,2,3')); // incorrect input
+console.log(checkRoot('1,2,3,4')); //'25, 5'
+console.log(checkRoot('4,5,6,7')); //'841, 29'
+console.log(checkRoot('4,5,6,7,z')); // incorrect input
+console.log(checkRoot('4,1,2,3')); // not consecutive
 //---------November 21
 //---------November 22
 //---------November 23
