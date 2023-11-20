@@ -231,7 +231,6 @@ const sortGrades = arr => {
   };
 console.log(sortGrades(["V0+", "V0", "V16", "V2", "VB", "V6"]));// ["VB", "V0", "V0+", "V2", "V6", "V16"]
 
-
 // KATA 2 7kyu
 const  scramble = (str, arr) => {
   let array = []
@@ -241,7 +240,6 @@ const  scramble = (str, arr) => {
 console.log(scramble('abcd', [0,3,1,2])); // acdb
 console.log(scramble('sc301s', [4,0,3,1,5,2]));// c0s3s1
 console.log(scramble('bskl5', [2,1,4,3,0])); // 5sblk
-
 
 // KATA 3 7kyu
 const checkRoot = str => {
