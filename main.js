@@ -288,6 +288,39 @@ const moveTen= s => {
 console.log(moveTen("testcase")); // "docdmkco"
 
 //---------November 22
+// www.codewars.com
+// KATA 1 7kyu
+function doubles(s) {
+ let pattern = /(.)\1/g;
+ let result = s;
+ while (pattern.test(result)) {
+  result = result.replace(pattern, '');
+ }
+ return result;
+}
+console.log(doubles('abbbzz'));
+console.log(doubles('zzayyybxxxxxcddd'));
+
+// KATA 2 7kyu
+const countDevelopers = list => list.filter(dev => dev.continent == 'Europe' && dev.language == 'JavaScript').length;
+console.log(countDevelopers([
+  { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'JavaScript' },
+  { firstName: 'Maia', lastName: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript' },
+  { firstName: 'Shufen', lastName: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML' },
+  { firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' }
+])); 
+console.log(countDevelopers([
+  { firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 19, language: 'HTML' },
+  { firstName: 'Lukas', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'HTML' }
+]));
+console.log(countDevelopers([{"firstName":"Mariami","lastName":"G.","country":"Georgia","continent":"Europe","age":29,"language":"Python"},{"firstName":"Fatima","lastName":"A.","country":"Algeria","continent":"Africa","age":25,"language":"JavaScript"},{"firstName":"Amar","lastName":"V.","country":"Bosnia and Herzegovina","continent":"Europe","age":32,"language":"Ruby"},{"firstName":"Oliver","lastName":"P.","country":"Wales","continent":"Europe","age":29,"language":"JavaScript"},{"firstName":"Ellen","lastName":"E.","country":"Finland","continent":"Europe","age":55,"language":"Ruby"},{"firstName":"Marija","lastName":"U.","country":"Republic of Macedonia","continent":"Europe","age":42,"language":"JavaScript"},{"firstName":"Emma","lastName":"B.","country":"Norway","continent":"Europe","age":19,"language":"Clojure"}]))
+
+// KATA 3 7kyu
+const hasUniqueChars = s => new Set(s).size === s.length;
+console.log(hasUniqueChars("  nAa")); //false
+console.log(hasUniqueChars("++-")); //false
+console.log(hasUniqueChars("abcdef")); // true
+console.log(hasUniqueChars("aA")); // true
 //---------November 23
 //---------November 24
 //---------November 27
