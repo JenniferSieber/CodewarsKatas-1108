@@ -255,6 +255,45 @@ console.log(checkRoot('4,5,6,7')); //'841, 29'
 console.log(checkRoot('4,5,6,7,z')); // incorrect input
 console.log(checkRoot('4,1,2,3')); // not consecutive
 //---------November 21
+// KATA 1 7kyu
+//  'sabbatical'  vs s
+// for each letter in s that is in a letter of sabbatical +1 to score
+// score of s-score + val + happiness > 22 'Sabbatical! Boom!' else 'Back to your desk, boy'
+function sabb(s, val, happiness){
+  let score = 0
+  for (let i = 0; i < s.length; i++) {
+    if ('sabbatical'.includes(s[i].toLowerCase())) {
+      score++;
+    }
+  }
+  return score + val + happiness > 22 ? 'Sabbatical! Boom!' : 'Back to your desk, boy.';
+}
+console.log(sabb('Can I have a sabbatical?', 5, 5));
+console.log(sabb('Why are you shouting?', 7, 2)); //'Back to your desk, boy.'
+console.log(sabb('What do you mean I cant learn to code??', 8, 9)); 
+console.log(sabb('Please calm down', 9, 1));// 'Back to your desk, boy.'
+
+// KATA 2 7kyu
+const fireFight = str => {
+  return str.split(' ').map((el => {
+    return el.toLowerCase().match('fire') ? el = '~~' : el;
+  })).join(' ');
+}
+console.log( fireFight('Boat Rudder Mast Boat Hull Water Fire Boat Deck Hull Fire Propeller Deck Fire Deck Boat Mast')); 
+console.log( fireFight('Mast Deck Engine Water Fire')); 
+
+
+
+// KATA 3 7kyu
+const moveTen= s => {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const move10 = 'klmnopqrstuvwxyzabcdefghij';
+  return s.replace(/[a-z]/g, x => move10[alphabet.indexOf(x)]); 
+}
+console.log(moveTen("testcase")); // "docdmkco"
+
+
+
 //---------November 22
 //---------November 23
 //---------November 24
