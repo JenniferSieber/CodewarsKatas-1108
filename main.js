@@ -358,6 +358,32 @@ const vowel2index = s => s.split('').map((char, i) => {
 console.log(vowel2index('this is my string') )
 
 //---------November 24
+// KATA 1 7kyu
+const findScreenHeight = (width, ratio)  => {
+  const ratios = ratio.split(':');
+  const height =(width / Number(ratios[0])) * Number(ratios[1]);
+  return `${width}x${height}`;
+}
+console.log(findScreenHeight(1024,"4:3"));
+console.log(findScreenHeight(1280,"16:9"));
+
+// KATA 2 7kyu
+const calculate = string  => {
+  const arr = string.split(' ');
+  let nums = [Number(arr[2]), Number(arr[6])];
+  let operator = arr[5];
+  return operator === 'gains' ? nums[0] + nums[1] : nums[0] - nums[1];
+  }
+console.log(calculate("Panda has 48 apples and loses 4")); 
+console.log(calculate("Jerry has 34 apples and gains 6")); 
+
+// KATA 3 7kyu
+const checkVowel = (string, position)  => {
+  return 'aeiouAEIOU'.includes(string[position]);
+}
+console.log(checkVowel('cat', 1) )
+console.log(checkVowel('Amanda', 0) )
+console.log(checkVowel('Amanda', -2))
 //---------November 27
 //---------November 28
 //---------November 29
