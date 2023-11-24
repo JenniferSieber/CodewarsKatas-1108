@@ -321,7 +321,42 @@ console.log(hasUniqueChars("  nAa")); //false
 console.log(hasUniqueChars("++-")); //false
 console.log(hasUniqueChars("abcdef")); // true
 console.log(hasUniqueChars("aA")); // true
+
 //---------November 23
+// www.codewars.com
+// KATA 1 7kyu
+const sortMyString = s  => {
+  let even = '';
+  let odd = '';
+ for (let i = 0; i < s.length; i++) {
+  if (i % 2 === 0) {
+    even += s[i];
+  } else {
+    odd += s[i];
+  }}
+ return `${even} ${odd}`;
+}
+console.log(sortMyString('CodeWars'));
+
+// KATA 2 7kyu
+const explode1 = s => {
+  let result = s.split('').map(char => {
+    let value = Number(char);
+    return char.repeat(value); 
+  })
+  return result.join('');
+}
+// Or 
+const explode = s => s.split("").map((char) => char.repeat(+char)).join("");
+console.log(explode1("312")); 
+console.log(explode("312")); 
+
+// KATA 3 7kyu
+const vowel2index = s => s.split('').map((char, i) => {
+    return (char.match(/[aeiou]/gi)) ? i + 1 : char;
+  }).join('');
+console.log(vowel2index('this is my string') )
+
 //---------November 24
 //---------November 27
 //---------November 28
