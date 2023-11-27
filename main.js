@@ -384,11 +384,11 @@ const checkVowel = (string, position)  => {
 console.log(checkVowel('cat', 1) )
 console.log(checkVowel('Amanda', 0) )
 console.log(checkVowel('Amanda', -2))
+
 //---------November 27
-// www.codewars.com
 // KATA 1 7kyu
 const areaCode = s => s.slice(s.indexOf('(') + 1, s.indexOf(')'));
-console.log(areaCode("The supplier's phone number is (555) 867-5309"))
+console.log(areaCode("The supplier's phone number is (555) 867-5309"));
 
 // KATA 2 7kyu
 const reverseSlice = s => {
@@ -417,10 +417,10 @@ const initializeNames = name => {
  }
  return test.join(' ');
 }
-console.log(initializeNames('Alice Betty Catherine Davis'))
-console.log(initializeNames('Lois Mary Lane'))
-console.log(initializeNames('Lois'))
-console.log(initializeNames('Lois Lane'))
+console.log(initializeNames('Alice Betty Catherine Davis'));
+console.log(initializeNames('Lois Mary Lane'));
+console.log(initializeNames('Lois'));
+console.log(initializeNames('Lois Lane'));
 //---------November 28
 //---------November 29
 //---------November 30
