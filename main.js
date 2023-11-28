@@ -421,6 +421,36 @@ console.log(initializeNames('Alice Betty Catherine Davis'));
 console.log(initializeNames('Lois Mary Lane'));
 console.log(initializeNames('Lois'));
 console.log(initializeNames('Lois Lane'));
+
+
 //---------November 28
+// KATA 1 7kyu
+const orderWord = s => {
+  if (s == '' || s == null) {
+    return 'Invalid String!';
+  }
+  else {
+    let newA = [];
+    for (let i = 0; i < s.length; i++) {
+    let uniVal = s.charCodeAt(i);
+    newA.push(uniVal);
+  }
+  newA = newA.sort((a,b) => a - b);
+  return newA.map(el => String.fromCharCode(el)).join('');
+  }
+};
+console.log(orderWord("hello world"));
+
+// KATA 2 7kyu
+const sortWords = s => s ? [...s].sort().join('') : 'Invalid String!';
+console.log(sortWords("!Hi You!"));
+
+// KATA 3 7kyu
+const sillycase = s => {
+  let mid = Math.round(s.length / 2);
+  return s.substr(0,mid).toLowerCase() + s.substr(mid).toUpperCase();
+}
+console.log(sillycase('foobar'));
+
 //---------November 29
 //---------November 30
