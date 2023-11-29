@@ -453,4 +453,52 @@ const sillycase = s => {
 console.log(sillycase('foobar'));
 
 //---------November 29
+// www.codewars.com
+// KATA 1 7kyu
+const detectOperator = n => {
+  const carriers = {
+    '039': 'Golden Telecom',
+    '050': 'MTS',
+    '063': 'Life:)',
+    '066': 'MTS',
+    '067': 'Kyivstar',
+    '068': 'Beeline',
+    '093': 'Life:)',
+    '095': 'MTS',
+    '096': 'Kyivstar',
+    '097': 'Kyivstar',
+    '098': 'Kyivstar',
+    '099': ' MTS ',
+}
+  let num = String(n).slice(1,4);
+  let msg = 'no info'
+  msg = carriers[num] || msg;
+  return msg;
+}
+console.log(detectOperator(80931551119))
+console.log(detectOperator(80971551119))
+console.log(detectOperator(8011155117711))
+
+
+// KATA 2 7kyu
+const ghostBusters = building => {
+  let str = building.replace(/\s/g, '')
+  return (str === building) ? `You just wanted my autograph didn't you?` : str;
+}
+console.log(ghostBusters('Sky scra per'))
+console.log(ghostBusters('O  f fi ce'))
+console.log(ghostBusters('BusStation'))
+
+
+// KATA 3 7kyu
+const solve = s => {
+  let consonants = /[bcdfghjklmnpqrstvwxyz]/gi
+  let vowelsArr = s.split(consonants)
+  let counts = vowelsArr.map(v => v.length)
+  return Math.max(...counts)
+}
+console.log(solve('foobar'))
+console.log(solve('codewarriors'))
+console.log(solve('suoidea'))
+console.log(solve('sdpzfg'))
 //---------November 30
