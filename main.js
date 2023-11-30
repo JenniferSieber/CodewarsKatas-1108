@@ -504,3 +504,38 @@ console.log(solve('sdpzfg'));
 
 
 //---------November 30
+// www.codewars.com
+// KATA 1 7kyu
+const calculate = s => {
+  let exp = s.replace(/plus/g, '+').replace(/minus/g, '-')
+  let elements = exp.split(/(\+|\-)/g)
+  let result = parseInt(elements[0], 10);
+  
+  for (let i = 1; i < elements.length; i += 2) {
+    let operator = elements[i]
+    let operand = parseInt(elements[i + 1], 10);
+    if (operator === '+') { 
+      result += operand 
+    } 
+    else if (operator === '-') {
+       result -= operand 
+      }
+  }
+  return `${result}`
+}
+console.log(calculate('1plus2plus3plus4'))
+console.log(calculate('1plus2plus3minus4'))
+console.log(calculate('1minus2minus3minus4'))
+
+// KATA 2 7kyu
+const solve = s => {
+  let alphabet = /[abcdefghijklmnopqrstuvwxyz]/gi
+  let numbers = s.split(alphabet)
+  return Math.max(...numbers)
+}
+console.log(solve('gh12cdy695m1') )
+
+// KATA 3 7kyu
+const stringMerge = (string1, string2, letter) => `${string1.slice(0, string1.indexOf(letter))}${string2.slice(string2.indexOf(letter))}`;
+console.log(stringMerge("person","here", "e"))
+console.log(stringMerge("incredible","people", "e"))
