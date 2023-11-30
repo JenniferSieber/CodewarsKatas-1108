@@ -90,7 +90,7 @@ String.prototype.toJadenCase = function() {
 console.log(toJadenCase("How can mirrors be real if our eyes aren't real"));
 
 // KATA 2 8kyu
-// const noSpace = str => str.split(' ').join('')
+// const noSpace = str => str.split(' ').join('');
 // or
 const noSpace = s => s.replace(/\s/g, '');
 console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB'));
@@ -111,7 +111,7 @@ console.log(twoSum([1,2,3], 4));
 const solve = s => {
   const alphabet = ' abcdefghijklmnopqrstuvwxyz';
   const arr = s.split(/[aeiou]/g);
-  let res = arr.map(el => el.split('').reduce((ttl,cv) => ttl + alphabet.indexOf(cv),0))
+  let res = arr.map(el => el.split('').reduce((ttl,cv) => ttl + alphabet.indexOf(cv),0));
   return Math.max(...res);
 }
 console.log(solve('zodiacs')); //26
@@ -174,7 +174,7 @@ console.log(stringParse('aaaabbcdefffffffg'));
 
 // KATA 2 6kyu
 const alphabetized = s => {
-  let str = s.replace(/[^a-zA-Z]/g, '')
+  let str = s.replace(/[^a-zA-Z]/g, '');
   return str
     .replace(/[^a-zA-Z]/g, '')
     .split('')
@@ -227,15 +227,15 @@ console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'goo
 // KATA 1 7kyu
 const sortGrades = arr => {
   const grades = ['VB','V0', 'V0+', 'V1', 'V2', 'V3', 'V4', 'V5','V6','V7','V8','V9','V10','V11','V12','V13','V14','V15','V16','V17'];
-  return arr.sort((a,b) => grades.indexOf(a) - grades.indexOf(b))
+  return arr.sort((a,b) => grades.indexOf(a) - grades.indexOf(b));
   };
 console.log(sortGrades(["V0+", "V0", "V16", "V2", "VB", "V6"]));// ["VB", "V0", "V0+", "V2", "V6", "V16"]
 
 // KATA 2 7kyu
 const  scramble = (str, arr) => {
-  let array = []
-  arr.forEach((charIndex, i) => array[charIndex] = str[i])
-  return array.join('')
+  let array = [];
+  arr.forEach((charIndex, i) => array[charIndex] = str[i]);
+  return array.join('');
 }
 console.log(scramble('abcd', [0,3,1,2])); // acdb
 console.log(scramble('sc301s', [4,0,3,1,5,2]));// c0s3s1
@@ -507,35 +507,35 @@ console.log(solve('sdpzfg'));
 // www.codewars.com
 // KATA 1 7kyu
 const calculate = s => {
-  let exp = s.replace(/plus/g, '+').replace(/minus/g, '-')
-  let elements = exp.split(/(\+|\-)/g)
+  let exp = s.replace(/plus/g, '+').replace(/minus/g, '-');
+  let elements = exp.split(/(\+|\-)/g);
   let result = parseInt(elements[0], 10);
   
   for (let i = 1; i < elements.length; i += 2) {
-    let operator = elements[i]
+    let operator = elements[i];
     let operand = parseInt(elements[i + 1], 10);
     if (operator === '+') { 
-      result += operand 
+      result += operand ;
     } 
     else if (operator === '-') {
-       result -= operand 
+       result -= operand; 
       }
   }
-  return `${result}`
+  return `${result}`;
 }
-console.log(calculate('1plus2plus3plus4'))
-console.log(calculate('1plus2plus3minus4'))
-console.log(calculate('1minus2minus3minus4'))
+console.log(calculate('1plus2plus3plus4'));
+console.log(calculate('1plus2plus3minus4'));
+console.log(calculate('1minus2minus3minus4'));
 
 // KATA 2 7kyu
 const solve = s => {
-  let alphabet = /[abcdefghijklmnopqrstuvwxyz]/gi
-  let numbers = s.split(alphabet)
-  return Math.max(...numbers)
+  let alphabet = /[abcdefghijklmnopqrstuvwxyz]/gi;
+  let numbers = s.split(alphabet);
+  return Math.max(...numbers);
 }
-console.log(solve('gh12cdy695m1') )
+console.log(solve('gh12cdy695m1'));
 
 // KATA 3 7kyu
 const stringMerge = (string1, string2, letter) => `${string1.slice(0, string1.indexOf(letter))}${string2.slice(string2.indexOf(letter))}`;
-console.log(stringMerge("person","here", "e"))
-console.log(stringMerge("incredible","people", "e"))
+console.log(stringMerge("person","here", "e"));
+console.log(stringMerge("incredible","people", "e"));
