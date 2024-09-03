@@ -1,4 +1,11 @@
 // Strings & Arrays only
+// ----September 3, 2024
+// 7kyu
+function longest(s1, s2) {
+  return [...new Set(s1 + s2)].sort().join("");
+}
+console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
+
 // ------- August 30, 2024
 // 6kyu
 function solution(number) {
