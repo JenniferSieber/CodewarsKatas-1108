@@ -1,4 +1,37 @@
 // Strings & Arrays only
+//----September 6, 2024
+// // codewars
+// 6kyu
+function toWeirdCase(string) {
+  return string.split(' ').map((word) => {
+    return word.split('').map((l,i) => {
+      return i % 2 == 0 ? l.toUpperCase() : l.toLowerCase()
+    }).join('')
+    
+  }).join(' ')
+}
+
+console.log(toWeirdCase('String'))
+console.log(toWeirdCase('Weird string case')) // "WeIrD StRiNg CaSe 
+
+// 6kyu
+function isAlt(word) {
+  console.log(word)
+  const vowels = 'aeiou'
+  for (let i = 1; i < word.length; i++) {
+    console.log(vowels.includes(word[i]), vowels.includes(word[i-1]))
+    if(vowels.includes(word[i]) === vowels.includes(word[i-1])) {
+      return false
+    }
+  }
+  return true
+}
+
+console.log(isAlt('amazon')) // true
+console.log(isAlt('banana')) // true
+console.log(isAlt('apple')) // false
+console.log(isAlt('arizona')) // true
+console.log(isAlt('art eggs is out utah'))
 // ----September 3, 2024
 // 7kyu
 function longest(s1, s2) {
