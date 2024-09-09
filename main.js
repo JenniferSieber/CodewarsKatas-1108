@@ -1,4 +1,30 @@
 // Strings & Arrays only
+// -----Sept 7, 2024
+// 6kyu 
+const countRepeats = str => {
+  let dups = 0
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == str[i - 1]) {
+      dups++
+    }
+  }
+  return dups
+}
+console.log(countRepeats('abbbbc'))
+console.log(countRepeats('ab cca'))
+
+// 6kyu 
+const createArrayOfTiers = num => {
+  let numArr = []
+  let numStr = num.toString()
+  for (let i = 0; i < numStr.length; i++) {
+    numArr.push(String(num).substring(0, i + 1))
+  }
+  return numArr
+}
+console.log(createArrayOfTiers(420))
+console.log(createArrayOfTiers(77777))
+console.log(createArrayOfTiers(5825))
 //----September 6, 2024
 // // codewars
 // 6kyu
