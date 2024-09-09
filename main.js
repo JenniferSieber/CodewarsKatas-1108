@@ -25,8 +25,8 @@ const createArrayOfTiers = num => {
 console.log(createArrayOfTiers(420))
 console.log(createArrayOfTiers(77777))
 console.log(createArrayOfTiers(5825))
+
 //----September 6, 2024
-// // codewars
 // 6kyu
 function toWeirdCase(string) {
   return string.split(' ').map((word) => {
