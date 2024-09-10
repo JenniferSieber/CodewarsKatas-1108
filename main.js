@@ -1,4 +1,5 @@
 // Strings & Arrays only
+
 // -----Sept 8, 2024
 // 6kyu
 function mergeStrings(first, second){
