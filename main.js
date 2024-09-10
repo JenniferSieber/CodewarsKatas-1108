@@ -1,4 +1,39 @@
 // Strings & Arrays only
+// -----Sept 8, 2024
+// 6kyu
+function mergeStrings(first, second){
+  for (let i = 0; i < first.length; i++) {
+    if (second.startsWith(first.substring(i))) {
+      return first + second.substring(first.length - i)
+    }
+    return first + second  
+  }
+}
+
+console.log(mergeStrings('abcde', 'cdefgh')) // "abcde" + "cdefgh" => "abcdefgh"
+console.log(mergeStrings('abc', 'def')) // "abcdef"
+console.log(mergeStrings('abaab', 'aabab')) // "abaabab"
+
+// 6kyu
+function solution(string) {
+  if (string == '') return ''
+  let newString = ''
+  for (let i = 0; i < string.length; i++) {
+    let char = string[i]
+    if (!(char.match(/[A-Z]/g))) {
+      newString += char
+    } else {
+      newString += ` ${char}`
+    }
+  }
+  return newString
+}
+console.log(solution('camelCasing'))
+console.log(solution('camelCasingCases'))
+console.log(solution('identifier'))
+console.log(solution(''))
+
+
 // -----Sept 7, 2024
 // 6kyu 
 const countRepeats = str => {
