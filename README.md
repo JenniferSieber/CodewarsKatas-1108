@@ -1,2 +1,2 @@
-# CodewarsKatas-1108 - End of November 2023
+# CodewarsKatas -November 2023-Present
 Daily Katas from www.codewars.com ---focus strings and arrays Javascript only
