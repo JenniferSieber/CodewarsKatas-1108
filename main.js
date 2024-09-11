@@ -1,5 +1,19 @@
 // Strings & Arrays only
 
+// -----Sept 9, 2024
+// 6kyu Chunky Strings
+const decrypt = encryption => {
+  let str = Array(26).fill(0)
+  for (let i = 0; i < encryption.length; i++) {
+    const asciiCode = encryption.charCodeAt(i)
+    if (asciiCode >= 97 && asciiCode <= 122) {
+      str[asciiCode - 97] += 1;
+    }
+  }
+  return str.join('')
+}
+console.log(decrypt('$aaaa#bbb*cc^fff!z')) // 43200300000000000000000001
+console.log(decrypt('z$aaa#ccc%eee1234567890')) // 30303000000000000000000001
 // -----Sept 8, 2024
 // 6kyu
 function mergeStrings(first, second){
