@@ -1,4 +1,16 @@
 // Strings & Arrays only
+// -----Sept 11, 2024
+// 6kyu
+const onlyDuplicates = str => {
+  return str
+    .split('')
+    .filter((char, _, arr) => arr.indexOf(char) !== arr.lastIndexOf(char))
+    .join('')
+}
+console.log(onlyDuplicates('abccdefee'))
+// OR 
+const onlyDuplicates1 = str => str.replace(/(.)(?<!\1.+)(?!.*\1)/g, '')
+console.log(onlyDuplicates1('abccdefee'))
 
 // -----Sept 9, 2024
 // 6kyu Chunky Strings
