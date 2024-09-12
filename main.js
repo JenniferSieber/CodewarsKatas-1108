@@ -1,4 +1,6 @@
 // Strings & Arrays only
+
+
 // -----Sept 11, 2024
 // 6kyu
 const onlyDuplicates = str => {
@@ -11,6 +13,7 @@ console.log(onlyDuplicates('abccdefee'))
 // OR 
 const onlyDuplicates1 = str => str.replace(/(.)(?<!\1.+)(?!.*\1)/g, '')
 console.log(onlyDuplicates1('abccdefee'))
+
 
 // -----Sept 9, 2024
 // 6kyu Chunky Strings
@@ -26,6 +29,8 @@ const decrypt = encryption => {
 }
 console.log(decrypt('$aaaa#bbb*cc^fff!z')) // 43200300000000000000000001
 console.log(decrypt('z$aaa#ccc%eee1234567890')) // 30303000000000000000000001
+
+
 // -----Sept 8, 2024
 // 6kyu
 function mergeStrings(first, second){
@@ -88,6 +93,7 @@ console.log(createArrayOfTiers(420))
 console.log(createArrayOfTiers(77777))
 console.log(createArrayOfTiers(5825))
 
+
 //----September 6, 2024
 // 6kyu
 function toWeirdCase(string) {
@@ -120,12 +126,15 @@ console.log(isAlt('banana')) // true
 console.log(isAlt('apple')) // false
 console.log(isAlt('arizona')) // true
 console.log(isAlt('art eggs is out utah'))
+
+
 // ----September 3, 2024
 // 7kyu
 function longest(s1, s2) {
   return [...new Set(s1 + s2)].sort().join("");
 }
 console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
+
 
 // ------- August 30, 2024
 // 6kyu
@@ -160,6 +169,7 @@ const isPanagram = str => str.match((/([a-z])(?!.*\1)/gi) || []).length === 26;
 console.log(isPanagram("The quick brown fox jumps over the lazy dog"));
 console.log(isPanagram("The brown fox jumps over the lazy dog"));
 
+
 //---------November 9
 // KATA 1 8kyu
 const neutralisation = (str1, str2) => str1.split('').map((char, index) => (char !== str2[index] ? '0' : char)).join('');
@@ -192,6 +202,7 @@ console.log(nicknameGenerator("Kimberly"));
 console.log(nicknameGenerator("Annette"));
 console.log(nicknameGenerator("Kay"));
 
+
 // //---------November 10
 // KATA 1 6kyu
 const duplicateEncode = word => {
@@ -221,6 +232,7 @@ console.log(duplicateCount("Indivisibilities"));
 // KATA 3 8kyu
 const numberToString = num => num.toString();
 console.log(numberToString(123));
+
 
 // //---------November 13
 // www.codewars.com
@@ -285,6 +297,7 @@ const arrayMash = (a1, a2) => {
 };
 console.log(arrayMash([1,2,3], ['a', 'b', 'c']));
 
+
 // //---------November 15
 // www.codewars.com
 // KATA 1 7kyu
@@ -304,6 +317,7 @@ const areYouPlayingBanjo = (name) => (name[0].match(/[r]/gi)) ?`${name} plays ba
 console.log(areYouPlayingBanjo('Robert'));
 console.log(areYouPlayingBanjo('rob'));
 console.log(areYouPlayingBanjo('Bob'));
+
 
  //---------November 16
 // KATA 1 6kyu
@@ -335,6 +349,7 @@ const alphaSeq = (str) => {
 };
 console.log(alphaSeq('ZpglnRxqenU'));
 
+
 //---------November 17
 // KATA 1 6kyu
 function inArray(a1, a2){
@@ -362,6 +377,7 @@ const well = arr => {
 console.log(well(['bad', 'bad', 'bad']));
 console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
 console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
+
 
 //---------November 20
 // www.codewars.com
@@ -395,6 +411,8 @@ console.log(checkRoot('1,2,3,4')); //'25, 5'
 console.log(checkRoot('4,5,6,7')); //'841, 29'
 console.log(checkRoot('4,5,6,7,z')); // incorrect input
 console.log(checkRoot('4,1,2,3')); // not consecutive
+
+
 //---------November 21
 // KATA 1 7kyu
 function sabb(s, val, happiness){
@@ -427,6 +445,7 @@ const moveTen= s => {
   return s.replace(/[a-z]/g, x => move10[alphabet.indexOf(x)]); 
 }
 console.log(moveTen("testcase")); // "docdmkco"
+
 
 //---------November 22
 // www.codewars.com
@@ -463,6 +482,7 @@ console.log(hasUniqueChars("++-")); //false
 console.log(hasUniqueChars("abcdef")); // true
 console.log(hasUniqueChars("aA")); // true
 
+
 //---------November 23
 // www.codewars.com
 // KATA 1 7kyu
@@ -498,6 +518,7 @@ const vowel2index = s => s.split('').map((char, i) => {
   }).join('');
 console.log(vowel2index('this is my string') )
 
+
 //---------November 24
 // KATA 1 7kyu
 const findScreenHeight = (width, ratio)  => {
@@ -525,6 +546,7 @@ const checkVowel = (string, position)  => {
 console.log(checkVowel('cat', 1) )
 console.log(checkVowel('Amanda', 0) )
 console.log(checkVowel('Amanda', -2))
+
 
 //---------November 27
 // KATA 1 7kyu
@@ -593,6 +615,7 @@ const sillycase = s => {
 }
 console.log(sillycase('foobar'));
 
+
 //---------November 29
 // www.codewars.com
 // KATA 1 7kyu
@@ -620,7 +643,6 @@ console.log(detectOperator(80931551119));
 console.log(detectOperator(80971551119));
 console.log(detectOperator(8011155117711));
 
-
 // KATA 2 7kyu
 const ghostBusters = building => {
   let str = building.replace(/\s/g, '');
@@ -629,7 +651,6 @@ const ghostBusters = building => {
 console.log(ghostBusters('Sky scra per'));
 console.log(ghostBusters('O  f fi ce'));
 console.log(ghostBusters('BusStation'));
-
 
 // KATA 3 7kyu
 const solve = s => {
