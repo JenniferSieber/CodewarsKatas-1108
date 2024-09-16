@@ -1,4 +1,12 @@
 // Strings & Arrays only
+// Sept 12, 2024
+// 7kyu
+// odd len: 1 char even len: 2 char
+const getMiddle = s => s.slice((s.length - 1)/ 2, s.length/2 + 1)
+console.log(getMiddle('test'))
+console.log(getMiddle('testing'))
+console.log(getMiddle('A'))
+console.log(getMiddle('middle'))
 
 
 // -----Sept 11, 2024
