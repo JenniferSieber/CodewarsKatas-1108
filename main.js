@@ -1,5 +1,12 @@
 // Strings & Arrays only
-// Sept 12, 2024
+
+// ----Sept 14, 2024
+// 8kyu
+const removeChar = str => str.slice(1, -1)
+console.log(removeChar('character')) // 'haracte'
+
+
+// ----Sept 12, 2024
 // 7kyu
 // odd len: 1 char even len: 2 char
 const getMiddle = s => s.slice((s.length - 1)/ 2, s.length/2 + 1)
