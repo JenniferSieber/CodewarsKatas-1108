@@ -1,4 +1,18 @@
 // Strings & Arrays only
+// ----Sept 16, 2024
+// 7kyu
+const fakeBin = str => {
+  let newStr = ''
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= 5) {
+      newStr += 1
+    } else {
+      newStr += 0
+    }
+  }
+  return newStr
+}
+console.log(fakeBin('45385593107843568')) //  '01011110001100111'
 
 // ----Sept 14, 2024
 // 8kyu
