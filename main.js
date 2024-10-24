@@ -1,4 +1,19 @@
 // Strings & Arrays only
+// October 4, 2024
+function domainName(string) {
+  let stringArray;
+  if ((string.startsWith("http"))) {
+    stringArray = string.split("/")[2].split(".");
+  } else {
+    stringArray = string.split(".");
+  }
+  return stringArray[0] !== "www" ? stringArray[0] : stringArray[1];
+}
+console.log(domainName("http://github.com/carbonfive/raygun")); // "github" 
+console.log(domainName("http://www.zombie-bites.com")); // "zombie-bites" 
+console.log(domainName("https://www.cnet.com")); // "cnet" 
+console.log(domainName("www.global.com")); // "global" 
+
 // ----Sept 16, 2024
 // 7kyu
 const fakeBin = str => {
