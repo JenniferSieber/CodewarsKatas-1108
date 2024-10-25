@@ -5,7 +5,7 @@ function mapNames(absentStudents, allStudents) {
   const absentStudentsSet = new Set(
     absentStudents
         .split(",")
-        .map(student => student.trim())
+        .map((student) => student.trim())
   );
 
   return allStudents
