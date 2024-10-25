@@ -1,4 +1,26 @@
 // Strings & Arrays only
+// October 24, 2024 
+function findJewels(jewels, stones) {
+  console.log("jewels", jewels);
+  console.log("stones", stones);
+  const map = {};
+  let count = 0;
+  // 1st LINEAR loop confirms all jewels --move through jewels, grab each one use bracket notation, assign to map
+  for (const jewel of jewels) {
+    map[jewel] = true;
+  }
+  // 2nd LINEAR loop compare all stones to all the jewels --validate each stone if stored within map
+  console.log("map of jewels", map);
+  for (const stone of stones) {
+    if (map[stone]) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log("Jewels within stones: ", findJewels("aA", "aAAbbbb")); // returns 3 -- "A" = jewel "a" = jewel
+console.log("Jewels within stones: ", findJewels("z", "ZZ")); // returns 0 -- "z" = jewel
 // October 15, 2024
 const sumMix = array => array.reduce((a,b) => Number(a) + Number(b), 0);
 console.log(sumMix([9, 3, '7', '3'])); // 22
