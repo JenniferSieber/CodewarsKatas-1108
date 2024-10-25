@@ -1,4 +1,26 @@
 // Strings & Arrays only
+// October 25, 2024
+function mapNames(absentStudents, allStudents) {
+  // Convert absent students to a Set for quick lookups
+  const absentStudentsSet = new Set(
+    absentStudents
+        .split(",")
+        .map(student => student.trim())
+  );
+
+  return allStudents
+    .split(",")
+    .map((student) => student.trim())
+    .filter((student) => !absentStudentsSet.has(student))
+    .join(", ");
+}
+console.log(
+  mapNames(
+    "Tim, Kamala, Joe, Kamala",
+    "Donald, Kamala, Theo, Tim, Vance, Joe, Barack, George, Bill, Hillary, Mitt, Kamala"
+  )
+);
+
 // October 24, 2024 
 function findJewels(jewels, stones) {
   const map = {};
