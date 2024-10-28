@@ -1,4 +1,20 @@
 // Strings & Arrays only
+// October 28, 2024 6kyu
+function dashatize(num) {
+  return Math.abs(num)
+    .toString()
+    .split("")
+    .map((digit) => (digit % 2 ? `-${digit}-` : digit))
+    .join("")
+    .replace(/--+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+console.log(dashatize(274)); // returns "2-7-4"
+console.log(dashatize(6815)); // returns "68-1-5"
+console.log(dashatize(-6314)); // returns "5-3-1-4"
+console.log(dashatize(-746147)); // returns "7-46-1-4-7"
+
 // October 25, 2024
 function mapNames(absentStudents, allStudents) {
   // Convert absent students to a Set for quick lookups
