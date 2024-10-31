@@ -1,4 +1,34 @@
 // Strings & Arrays only
+// October 31, 2024 Happy Halloween
+const maxCharacter = (string) => {
+  const charMap = {};
+  let maxCount = null;
+  let maxChar = "";
+
+  for (const char of string) {
+    // sanitize to all lowercase comparisons
+    charMap[char.toLowerCase()] = charMap[char.toLowerCase()] + 1 || 1;
+  }
+
+  for (const char in charMap) {
+    if (charMap[char] > maxCount) {
+      maxCount = charMap[char];
+      maxChar = char;
+    }
+  }
+
+  return maxChar;
+};
+console.log(maxCharacter("Happy Haunted Halloween")); // h
+console.log(maxCharacter("a flying bat and a black cat")); // a
+console.log(maxCharacter("Halloween")); // l
+console.log(maxCharacter("Hello world")); // l
+console.log(maxCharacter("Orange Ogres")); // o
+console.log(maxCharacter("windy, howling weather")); // w
+console.log(maxCharacter("everyone enjoys edible candy")); // e
+console.log(maxCharacter("Nice night for halloween")); // e
+console.log(maxCharacter("network now")); // n
+
 // October 28, 2024 6kyu
 function dashatize(num) {
   return Math.abs(num)
