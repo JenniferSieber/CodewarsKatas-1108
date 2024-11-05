@@ -1,4 +1,28 @@
 // Strings & Arrays only
+// Nov 5, 2024 Leetcode Medium HashMap
+function groupAnagrams(strs) {
+  // track the strs with a hashmap
+  const map = new Map();
+  // loop through the array
+  for (const str of strs) {
+    // validate the anagrams by sorting the words alphabetically and validating matches
+    const sorted = str.split("").sort().join("");
+    // create keys of the map as the sorted words
+    if (map.has(sorted)) {
+      // push if matches else create new arrays if not matches
+      map.get(sorted).push(str);
+    } else {
+      map.set(sorted, [str]);
+    }
+  }
+  // return the map as an array of the values
+  return Array.from(map.values());
+}
+console.log(groupAnagrams(["tan", "nat", "bat"]));
+console.log(groupAnagrams(["eat", "tea", "ate", "bat"]));
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+console.log(groupAnagrams(["bat", "tab", "rab"]));
+
 // October 31, 2024 Happy Halloween
 const maxCharacter = (string) => {
   const charMap = {};
