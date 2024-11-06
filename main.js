@@ -1,4 +1,31 @@
 // Strings & Arrays only
+// Nov 6, 2025 Leetcode HashMap
+var repeatedCharacter = function (s) {
+  // track the chars of string in a map
+  const map = {};
+  // deal with datatypes other than string
+  if (typeof s != "string") return s;
+  // loop the string
+  for (const char of s) {
+    // if char not in map
+    if (!map[char]) {
+      // set the char in the map
+      map[char] = true;
+    } else {
+      // return first char already in map
+      return char;
+    }
+  }
+  // if no chars are duplicated or empty string
+  return s;
+};
+console.log(repeatedCharacter("abccbaacz"));
+console.log(repeatedCharacter("abcdd"));
+console.log(repeatedCharacter("d"));
+console.log(repeatedCharacter(""));
+console.log(repeatedCharacter(1));
+console.log(repeatedCharacter(false));
+
 // Nov 5, 2024 Leetcode Medium HashMap
 function groupAnagrams(strs) {
   // track the strs with a hashmap
