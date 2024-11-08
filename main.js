@@ -26,6 +26,7 @@ console.log(countJewels("", "ZZ"));
 console.log(countJewels("", ""));
 console.log(countJewels("xxx", true));
 console.log(countJewels(true, "zz"));
+
 // Nov 6, 2024 Leetcode HashMap
 var repeatedCharacter = function (s) {
   // track the chars of string in a map
