@@ -1,5 +1,32 @@
 // Strings & Arrays only
-// Nov 6, 2025 Leetcode HashMap
+// Nov 8, 2024
+function countJewels(jewels, stones) {
+  // console.log(jewels, stones);
+  if (typeof jewels !== "string" || typeof stones !== "string") return 0;
+  // create a count variable to keep track of jewels starts at 0
+  let count = 0;
+  // create a map to store each unique jewel to validate stones against
+  const jewelMap = {};
+  // loop one, fill the map with jewels
+  for (const jewel of jewels) {
+    if (!jewelMap[jewel]) {
+      jewelMap[jewel] = true;
+    }
+  }
+  // loop two, validate each stone, if a jewel increment count by +1
+  for (const stone of stones) {
+    if (jewelMap[stone]) count++;
+  }
+  return count;
+}
+console.log(countJewels("aA", "aAAbbbb"));
+console.log(countJewels("aAZz", "aAAbbbZzZzb"));
+console.log(countJewels("z", "ZZ"));
+console.log(countJewels("", "ZZ"));
+console.log(countJewels("", ""));
+console.log(countJewels("xxx", true));
+console.log(countJewels(true, "zz"));
+// Nov 6, 2024 Leetcode HashMap
 var repeatedCharacter = function (s) {
   // track the chars of string in a map
   const map = {};
