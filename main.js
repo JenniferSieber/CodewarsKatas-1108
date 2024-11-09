@@ -1,7 +1,6 @@
 // Strings & Arrays only
 // Nov 8, 2024
 function countJewels(jewels, stones) {
-  // console.log(jewels, stones);
   if (typeof jewels !== "string" || typeof stones !== "string") return 0;
   // create a count variable to keep track of jewels starts at 0
   let count = 0;
