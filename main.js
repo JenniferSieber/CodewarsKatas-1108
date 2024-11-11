@@ -1,4 +1,33 @@
 // Strings & Arrays only
+// Nov 11, 2024
+function domainName(str) {
+ // sanitize string
+ if (typeof str !== "string") return "Not a string.";
+ str = str.toLowerCase();
+
+ // create variable to assign alternative array values to based on start of str
+ let strArr;
+ // array creation based on str potentially removing beginning part of string
+ if (str.startsWith("http://")) {
+  strArr = str.slice(7).split(".");
+ } else if (str.startsWith("https://")) {
+  strArr = str.slice(8).split(".");
+ } else {
+  strArr = str.split(".");
+ }
+ // use ternary to validate if domain at index 0 or 1 via www
+ return strArr[0] === "www" ? strArr[1] : strArr[0];
+}
+
+console.log(domainName(12222));
+console.log(domainName("http://github.com/carbonfive/raygun"));
+console.log(domainName("http://www.zombie-bites.com"));
+console.log(domainName("https://www.cnet.com"));
+console.log(
+  domainName("https://www.codewars.com/kata/514a024011ea4fb54200004b")
+);
+console.log(domainName("https://jennifersieber.netlify.app/"));
+console.log(domainName("https://WWW.jennifersieber.netlify.app/"));
 // Nov 8, 2024
 function countJewels(jewels, stones) {
   if (typeof jewels !== "string" || typeof stones !== "string") return 0;
