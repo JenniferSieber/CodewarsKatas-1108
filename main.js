@@ -1,4 +1,18 @@
 // Strings & Arrays only
+// Nov 12, 2024
+// Simple Recursive Examples
+function walk(steps) {
+  for (i = 0; i < steps; i++) {
+    console.log("Step :", steps);
+    if (steps < 1) {
+      // BASE CASE
+      return;
+    }
+    return walk(steps - 1); //CALL STACK.pop() off
+  }
+}
+console.log(walk(5), "walk");
+
 // Nov 11, 2024
 function domainName(str) {
  if (typeof str !== "string") return "Not a string.";
