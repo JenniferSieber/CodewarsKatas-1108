@@ -21,6 +21,16 @@ function factorial(num) {
 }
 console.log(factorial(5), "factorial");
 
+function power(base, exponent) {
+  // BASE CASE
+  if (exponent < 1) return 1;
+  // RECURSIVE
+  return base * power(base, exponent - 1);
+}
+console.log(power(2, 0), "power");
+console.log(power(0, 8), "power");
+console.log(power(2, 8), "power");
+
 // Nov 11, 2024
 function domainName(str) {
  if (typeof str !== "string") return "Not a string.";
