@@ -13,6 +13,14 @@ function walk(steps) {
 }
 console.log(walk(5), "walk");
 
+function factorial(num) {
+  // BASECASE
+  if (num < 1) return 1;
+  // RECURSIVE CALL
+  return num * factorial(num - 1);
+}
+console.log(factorial(5), "factorial");
+
 // Nov 11, 2024
 function domainName(str) {
  if (typeof str !== "string") return "Not a string.";
