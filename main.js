@@ -31,6 +31,16 @@ console.log(power(2, 0), "power");
 console.log(power(0, 8), "power");
 console.log(power(2, 8), "power");
 
+unction fibonacci(n) {
+  // BASE CASE | RECURSIVE 
+  return (n < 2) ? n : fibonacci(n-1) + fibonacci(n-2);
+};
+console.log(fibonacci(1), "fibonacci");
+console.log(fibonacci(2), "fibonacci");
+console.log(fibonacci(3), "fibonacci");
+console.log(fibonacci(4), "fibonacci");
+console.log(fibonacci(5), "fibonacci");
+
 // Nov 11, 2024
 function domainName(str) {
  if (typeof str !== "string") return "Not a string.";
