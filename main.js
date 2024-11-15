@@ -1,4 +1,22 @@
 // Strings & Arrays only
+// Nov 15, 2024  
+// Towers of Hanoi
+function hanoi(n, start, end) {
+  // helper function
+  function pm(start, end) {
+    console.log(start, "->", end);
+  }
+  if (n === 1) {
+    pm(start, end);
+  } else {
+    let other = 6 - (start + end);
+    hanoi(n - 1, start, other);
+    pm(start, end);
+    hanoi(n - 1, other, end);
+  }
+}
+console.log(hanoi(3, 1, 3));
+
 // Nov 12, 2024
 // Simple Recursive Examples
 function walk(steps) {
