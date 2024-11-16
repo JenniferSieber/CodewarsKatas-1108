@@ -17,6 +17,22 @@ function hanoi(n, start, end) {
 }
 console.log(hanoi(3, 1, 3));
 
+// Nov 14, 2024
+console.log("memoization fibonacci");
+let memo = {};
+const memoizationFib = (n) => {
+  if (n === 0 || n === 1) {
+    return n;
+  } else if (memo[n]) {
+    return memo[n];
+  } else {
+    let result = memoizationFib(n - 1) + memoizationFib(n - 2);
+    memo[n] = result;
+    return result;
+  }
+};
+console.log(memoizationFib(5));
+
 // Nov 12, 2024
 // Simple Recursive Examples
 function walk(steps) {
@@ -58,22 +74,6 @@ console.log(fibonacci(2), "fibonacci");
 console.log(fibonacci(3), "fibonacci");
 console.log(fibonacci(4), "fibonacci");
 console.log(fibonacci(5), "fibonacci");
-
-// Nov 14, 2024
-console.log("memoization fibonacci");
-let memo = {};
-const memoizationFib = (n) => {
-  if (n === 0 || n === 1) {
-    return n;
-  } else if (memo[n]) {
-    return memo[n];
-  } else {
-    let result = memoizationFib(n - 1) + memoizationFib(n - 2);
-    memo[n] = result;
-    return result;
-  }
-};
-console.log(memoizationFib(5));
 
 // Nov 11, 2024
 function domainName(str) {
